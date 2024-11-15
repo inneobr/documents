@@ -169,11 +169,29 @@ EOF
    apt-get install -y kubelet kubeadm kubectl
    apt-mark hold kubelet kubeadm kubectl
 ```
-- Inocoar o kubeadm no servidor master
+- Iniciar o kubeadm no servidor master
 ```
    kubeadm init
 ```
 
+- Realizar as configurações do servidor conforme kubernets sugere
+```
+   mkdir -p $HOME/.kube
+   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+
+- Conecta os work pods worker-01 e worker-02 ao servidor master, usar a chave que o seu kubernets master gerou 
+```
+ kubeadm join 10.1.1.100:6443 --token f9hl89.23b2dmx6w0xvtbbm \
+        --discovery-token-ca-cert-hash sha256:2c9d5da3a496ebc68d879671cae165dc0d0bcc9b2e09be60e4752761764f9c5f
+```
+
+- Consulta se esta tudo funcinando e confere os nodes que provavelmente estarão como NotReading
+```
+   kubectl cluster-info
+   kubectl get nodes
+```
 
 
 
