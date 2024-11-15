@@ -110,5 +110,10 @@
 ```
    nano /etc/fstab
 ```
+- Finaliza remontando as partições e confere o resultado que devera aparecer Swap: 0B 0B 0B
+```
+   mount -a
+   free -h
+```
 
 
