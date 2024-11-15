@@ -222,7 +222,7 @@ EOF
    kubectl get nodes
 ```
 
-### 10 Para adicionar novos works você deve gerar um novo token com o comando pois os mesmos tem validade e não podem ser usados no futuro
+### 10 Para adicionar novos works você deve gerar um novo token pois os mesmos tem validade e não podem ser usados no futuro
 ```
    kubeadm token create --print-join-command
 ```
