@@ -142,7 +142,40 @@ EOF
 ```
    sysctl --system
 ```
-  
+
+### 07 - Instalação do docker nas máquinas
+```
+   apt install -y curl gnupg2 software-properties-common apt-transport-https ca-certificates
+   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/docker.gpg
+   add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+   apt update
+   apt install -y containerd.io
+```
+
+### 08 - Configura o containerd nas máquinas
+```
+   containerd config default | sudo tee /etc/containerd/config.toml >/dev/null 2>&1
+   sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
+   systemctl restart containerd
+   systemctl enable containerd
+```
+
+### 09 - Adicionar repositorio e instalar o kubernets nas máquinas
+```
+   apt-get install -y apt-transport-https ca-certificates curl
+   curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+   echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+   apt-get update
+   apt-get install -y kubelet kubeadm kubectl
+   apt-mark hold kubelet kubeadm kubectl
+```
+- Inocoar o kubeadm no servidor master
+```
+   kubeadm init
+```
+
+
+
 
 
 
