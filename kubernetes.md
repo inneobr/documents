@@ -3,7 +3,7 @@
 > [!NOTE]
 > Configuração de cluster kubernets em servidor ubuntu
 
-01. renomear as maquinas
+01. Renomear as máquinas
 
 ```
  hostname master
