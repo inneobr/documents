@@ -5,6 +5,6 @@
 
 01. renomear as maquinas
 
-hostname master
-echo "master" > /etc/hostname
-bash
+> hostname master
+> echo "master" > /etc/hostname
+> bash
