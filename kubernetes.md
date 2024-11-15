@@ -3,21 +3,21 @@
 > [!NOTE]
 > Configuração de cluster kubernets em servidor ubuntu
 
-1. Renomear as máquinas
+### 01 - Renomear as máquinas
    
-### master
+- [1.] master
 ```
  hostname master
  echo "master" > /etc/hostname
  bash
 ```
-### worker-01
+- [2.] worker-01
 ```
  hostname worker-01
  echo "worker-01" > /etc/hostname
  bash
 ```
-### worker-02
+- [3.] worker-02
 ```
  hostname worker-02
  echo "worker-02" > /etc/hostname
