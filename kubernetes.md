@@ -10,3 +10,15 @@
  echo "master" > /etc/hostname
  bash
 ```
+
+```
+ hostname worker-01
+ echo "worker-01" > /etc/hostname
+ bash
+```
+
+```
+ hostname worker-02
+ echo "worker-02" > /etc/hostname
+ bash
+```
