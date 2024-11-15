@@ -101,5 +101,14 @@
    10.1.1.101   worker-01.inneo.org   worker-01
    10.1.1.102   worker-02.inneo.org   worker-02
 ```
+### 05 - Desativar swap nas máquinas
+```
+   swapoff -a
+   free -h   
+```
+- Comenta a linha do swap no fstab
+```
+   nano /etc/fstab
+```
 
 
