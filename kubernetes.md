@@ -171,7 +171,9 @@ EOF
 ```
 - Iniciar o kubeadm no servidor master
 ```
-   kubeadm init
+   kubeadm init \
+  --pod-network-cidr=10.10.0.0/16 \
+  --control-plane-endpoint=master
 ```
 
 - Realizar as configurações do servidor conforme kubernets sugere
@@ -192,6 +194,34 @@ EOF
    kubectl cluster-info
    kubectl get nodes
 ```
+
+- Baixa o arquivo de configuração do calico
+```
+   curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml -O
+```
+
+- Edita o arquivo para iniciar os pods
+```
+   nano calico.yaml
+```
+> [!NOTE]
+> Faz a busca do CALICO_IPV4POOL_CIDR e descomenta as linhas
+```
+   # no effect. This should fall within `--cluster-cidr`.
+   - name: CALICO_IPV4POOL_CIDR
+    value: "10.10.0.0/16"
+
+   # Disable file logging so `kubectl logs` works.
+   - name: CALICO_DISABLE_FILE_LOGGING
+    value: "true"
+```
+
+- Aplica as configurações do calico
+```
+   kubectl apply -f calico.yam
+   kubectl get nodes
+```
+
 
 
 
