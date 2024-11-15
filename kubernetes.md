@@ -3,7 +3,14 @@
 > [!NOTE]
 > Configuração de cluster kubernets em servidor ubuntu
 
-### 01 - Renomear as máquinas
+### 01 - Atualizar as máquinas
+
+```
+   apt-get update
+   apt-get upgrade
+```
+
+### 02 - Renomear as máquinas
    
 - master
 ```
