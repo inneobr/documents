@@ -42,18 +42,18 @@
 
 - master
 ```
-   network:
-       version: 2
-       ethernets:
-           ens33:
-               dhcp4: no
-               dhcp6: true
-               addresses: [10.1.1.100/24]
-               routes:
-               - to: default
-                 via: 10.1.1.1
-               nameservers:
-                 addresses: [10.1.1.1,8.8.8.8]
+network:
+   version: 2
+   ethernets:
+      ens33:
+         dhcp4: no
+         dhcp6: true
+         addresses: [10.1.1.100/24]
+            routes:
+            - to: default
+               via: 10.1.1.1
+            nameservers:
+               addresses: [10.1.1.1,8.8.8.8]
 ```
 - worker-01
 ```
@@ -95,11 +95,13 @@
 
 ### 04 - Configurar host nas máquinas
 ```
-   # K8S kubernets cluster nodes
+nano /etc/hosts
+
+# K8S kubernets cluster nodes
    
-   10.1.1.100   master.inneo.org     master
-   10.1.1.101   worker-01.inneo.org   worker-01
-   10.1.1.102   worker-02.inneo.org   worker-02
+10.1.1.100   master.inneo.org     master
+10.1.1.101   worker-01.inneo.org   worker-01
+10.1.1.102   worker-02.inneo.org   worker-02
 ```
 ### 05 - Desativar swap nas máquinas
 ```
