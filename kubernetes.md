@@ -146,6 +146,13 @@ EOF
 ```
 
 ### 07 - Instalação do docker nas máquinas
+
+- Instalação facil uvuntu 22.04 usar uma das opções, não precisa executar as duas 
+```
+   curl -fsSL https://get.docker.com | bash
+```
+
+- instalação raiz
 ```
    apt install -y curl gnupg2 software-properties-common apt-transport-https ca-certificates
    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/docker.gpg
