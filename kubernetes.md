@@ -49,11 +49,11 @@ network:
          dhcp4: no
          dhcp6: true
          addresses: [10.1.1.100/24]
-            routes:
-            -  to: default
-               via: 10.1.1.1
-            nameservers:
-               addresses: [10.1.1.1,8.8.8.8]
+         routes:
+         -  to: default
+            via: 10.1.1.1
+         nameservers:
+            addresses: [10.1.1.1,8.8.8.8]
 ```
 - worker-01
 ```
@@ -64,11 +64,11 @@ network:
          dhcp4: no
          dhcp6: true
          addresses: [10.1.1.101/24]
-            routes:
-            -  to: default
-               via: 10.1.1.1
-            nameservers:
-               addresses: [10.1.1.1,8.8.8.8]
+         routes:
+         -  to: default
+            via: 10.1.1.1
+         nameservers:
+            addresses: [10.1.1.1,8.8.8.8]
 ```
 - worker-02
 ```
@@ -79,11 +79,11 @@ network:
          dhcp4: no
          dhcp6: true
          addresses: [10.1.1.102/24]
-            routes:
-            -  to: default
-               via: 10.1.1.1
-            nameservers:
-               addresses: [10.1.1.1,8.8.8.8]
+         routes:
+         -  to: default
+            via: 10.1.1.1
+         nameservers:
+            addresses: [10.1.1.1,8.8.8.8]
 ```
 
 - Testar as configurações e aplicar novo endereço de rede
