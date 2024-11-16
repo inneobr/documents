@@ -146,8 +146,10 @@ EOF
 ```
 
 ### 07 - Instalação do docker nas máquinas
+> [!TIP]
+> Instalação facil ubuntu 22.04 usar uma das opções, não precisa executar as duas
 
-- Instalação facil uvuntu 22.04 usar uma das opções, não precisa executar as duas 
+- Modo facil
 ```
    curl -fsSL https://get.docker.com | bash
 ```
