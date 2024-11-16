@@ -229,7 +229,7 @@ EOF
 
 - Aplica as configurações do calico
 ```
-   kubectl apply -f calico.yam
+   kubectl apply -f calico.yaml
    kubectl get nodes
 ```
 
