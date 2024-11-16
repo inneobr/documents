@@ -120,10 +120,10 @@ nano /etc/hosts
 
 ### 06 - Carregar os modulos no kernel das máquinas
 ```
-   tee /etc/modules-load.d/containerd.conf <<EOF
-   overlay
-   br_netfilter
-   EOF
+sudo tee /etc/modules-load.d/containerd.conf <<EOF
+overlay
+br_netfilter
+EOF
 ```
 
 - Aceita as configurações
