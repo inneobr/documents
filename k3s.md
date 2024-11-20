@@ -1,6 +1,6 @@
 ## Servidor Linux windows
 
-[1] Instalar o wsl
+[1]. Instalar o wsl
 ```
 wsl --install
 ```  
