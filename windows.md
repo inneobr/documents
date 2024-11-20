@@ -1,14 +1,25 @@
 ## Servidor Linux windows
 
-- Instalar o wsl
+[1] Instalar o wsl
 ```
-wsl --install
+- wsl --install
 ```  
-- Listar os sistemas operacionais disponiveis para instalação.
+[2] Listar os sistemas operacionais disponiveis para instalação.
 ```
-wsl --list --online
+- wsl --list --online
 ```
-- Instalar a versão escolhida, pode substituir o ubuntu por uma de sua escolha.
+[3] Instalar a versão escolhida, pode substituir o ubuntu por uma de sua escolha.
 ```
-wsl --install Ubuntu-22.04
+- wsl --install Ubuntu-22.04
+```
+
+[4] instalação K3S
+```
+```
+
+[] instalação do helm
+```
+- curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+- chmod 700 get_helm.sh
+- ./get_helm.sh
 ```
