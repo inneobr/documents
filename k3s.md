@@ -2,24 +2,25 @@
 
 [1] Instalar o wsl
 ```
-- wsl --install
+wsl --install
 ```  
 [2] Listar os sistemas operacionais disponiveis para instalação.
 ```
-- wsl --list --online
+wsl --list --online
 ```
 [3] Instalar a versão escolhida, pode substituir o ubuntu por uma de sua escolha.
 ```
-- wsl --install Ubuntu-22.04
+wsl --install Ubuntu-22.04
 ```
 
 [4] instalação K3S
 ```
+curl -sfL https://get.k3s.io | bash
 ```
 
-[] instalação do helm
+[5] instalação do helm
 ```
-- curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-- chmod 700 get_helm.sh
-- ./get_helm.sh
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
 ```
