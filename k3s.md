@@ -1,6 +1,6 @@
 ## Servidor Linux windows
 
-`#000000`
+`#000000*`
 1. Instalar o wsl
 ```
 wsl --install
