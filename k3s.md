@@ -19,12 +19,12 @@ wsl --install Ubuntu-22.04
 curl -sfL https://get.k3s.io | bash
 ```
 
-5 - instalação do helm
+5 - Instalação docker
 ```
-curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+curl -fsSL https://get.docker.com | bash
 ```
 
-* Remover um diretorio
+6 - instalação do helm
 ```
-rm -rf pasta
+curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 ```
