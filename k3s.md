@@ -1,6 +1,6 @@
 ## Servidor Linux windows
 
-[1]. Instalar o wsl
+1. `#0969DA` Instalar o wsl
 ```
 wsl --install
 ```  
