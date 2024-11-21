@@ -38,3 +38,9 @@ curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 |
 ```
 wsl --unregister Ubuntu-22.04
 ```
+
+9 - Instalação do docker
+```
+curl -fsSL https://get.docker.com | bash
+```
+
