@@ -18,5 +18,5 @@ mv kind /usr/local/bin/
 4 - Configurar o autocomplete do kind no bash 
 ```
 source <(kind completion bash)
-echo "source <(kind completion bash)" >> ../.bashrc
+echo "source <(kind completion bash)" >> ~/.bashrc
 ```
