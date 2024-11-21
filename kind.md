@@ -36,3 +36,8 @@ nodes:
     protocol: TCP
 - role: worker
 ```
+
+6 - Criar o cluster usando a configuração do ingress.yaml
+```
+kind create cluster --name cluster-local --config ingress.yaml
+```
