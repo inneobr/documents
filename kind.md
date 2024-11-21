@@ -41,3 +41,20 @@ nodes:
 ```
 kind create cluster --name cluster-local --config ingress.yaml
 ```
+
+7 - Install kubectl
+```
+curl -LO https://dl.k8s.io/release/v1.31.0/bin/linux/amd64/kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```
+
+8 - Instalação nginx
+```
+kubectl apply -f https://kind.sigs.k8s.io/examples/ingress/deploy-ingress-nginx.yaml
+```
+
+9 - Ver os nodes
+```
+kind get nodes --name cluster-local
+```
