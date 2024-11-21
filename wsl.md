@@ -34,7 +34,7 @@ curl -fsSL https://get.docker.com | bash
 curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 ```
 
-8 - Desinstalar a distrivuição do wsl
+8 - Desinstalar a distribuição do wsl
 ```
 wsl --unregister Ubuntu-22.04
 ```
