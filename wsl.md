@@ -37,4 +37,4 @@ curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 |
 8 - Desinstalar a distrivuição do wsl
 ```
 wsl --unregister Ubuntu-22.04
-``
+```
