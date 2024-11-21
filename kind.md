@@ -20,3 +20,20 @@ mv kind /usr/local/bin/
 source <(kind completion bash)
 echo "source <(kind completion bash)" >> ~/.bashrc
 ```
+
+5 - Create o arquivo ingress.yaml
+```
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+  extraPortMappings:
+  - containerPort: 80
+    hostPort: 80
+    protocol: TCP
+  - containerPort: 443
+    hostPort: 443
+    protocol: TCP
+- role: worker-01
+- role: worker-02
+```
